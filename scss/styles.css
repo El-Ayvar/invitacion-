@@ -1,0 +1,93 @@
+body {
+    background: #f5f5f5;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+}
+.invitacion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 16px;
+}
+.invitacion-card {
+    background: #fff;
+    border: 2px solid #bfa980;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 12px; /* Menos padding para móvil */
+    max-width: 98vw;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.invitacion-card h1,
+.invitacion-card .nombre,
+.invitacion-card p,
+.invitacion-card hr,
+.invitacion-card .formal,
+.invitacion-card .firma {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.7s forwards;
+}
+.invitacion-card h1 { animation-delay: 0.1s; }
+.invitacion-card .nombre { animation-delay: 0.3s; }
+.invitacion-card hr { animation-delay: 0.5s; }
+.invitacion-card p:nth-of-type(2) { animation-delay: 0.7s; }
+.invitacion-card p:nth-of-type(3) { animation-delay: 0.9s; }
+.invitacion-card hr:nth-of-type(2) { animation-delay: 1.1s; }
+.invitacion-card .formal { animation-delay: 1.3s; }
+.invitacion-card .firma { animation-delay: 1.5s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.invitacion-card h1 {
+    font-size: 1.4rem;
+    color: #bfa980;
+    margin-bottom: 0.5em;
+}
+.invitacion-card .nombre {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+.invitacion-card .detalle,
+.invitacion-card .lugar {
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+.invitacion-card hr {
+    border: none;
+    border-top: 1px solid #bfa980;
+    margin: 1em 0;
+}
+.invitacion-card .formal {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 1em;
+}
+
+/* Responsive para pantallas mayores */
+@media (min-width: 600px) {
+    .invitacion-card {
+        padding: 60px 48px;
+        max-width: 420px;
+    }
+    .invitacion-card h1 {
+        font-size: 2rem;
+    }
+    .invitacion-card .nombre {
+        font-size: 1.2rem;
+    }
+    .invitacion-card .detalle,
+    .invitacion-card .lugar {
+        font-size: 1.1rem;
+    }
+}
