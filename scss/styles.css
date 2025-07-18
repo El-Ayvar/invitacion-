@@ -107,6 +107,16 @@ body {
     font-family: 'Georgia', serif;
     letter-spacing: 1px;
 }
+.invitacion-card .presente {
+    animation-delay: 2.2s;
+    font-size: 1.02rem;
+    color: #4d4637;
+    margin-top: 1.2em;
+    font-style: italic;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.7s forwards;
+}
 .invitacion-card p {
     font-size: 1.05rem;
     color: #4d4637;
